@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [mysuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Utilities.ExtentReportManager"/>
+  </listeners>
+  <test thread-count="5" name="chrometest(failed)">
+    <parameter name="os" value="windows"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="Testcases.TC_002_Login">
+        <methods>
+          <include name="setup"/>
+          <include name="verifyLogin"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Testcases.TC_002_Login -->
+      <class name="Testcases.TC_003_LoginWithDDT">
+        <methods>
+          <include name="verify_LoginDDT"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Testcases.TC_003_LoginWithDDT -->
+      <class name="Testcases.TC_001">
+        <methods>
+          <include name="setup"/>
+          <include name="verifyAccountRegistration"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Testcases.TC_001 -->
+    </classes>
+  </test> <!-- chrometest(failed) -->
+</suite> <!-- Failed suite [mysuite] -->
